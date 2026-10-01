@@ -455,6 +455,29 @@ body {
   color: var(--text-main);
 }
 
+.card-links-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.live-link {
+  font-size: 0.82rem;
+  color: var(--primary-color);
+  background-color: #eff6ff;
+  border: 1px solid #bfdbfe;
+  padding: 3px 8px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.live-link:hover {
+  background-color: var(--primary-color);
+  color: #ffffff;
+}
+
 /* --- 8. Skills Section --- */
 .skills-section {
   padding: 70px 0;
