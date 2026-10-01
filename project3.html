@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Portfolio Website | Kishore Kumar K</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .project-page-container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    .back-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 25px;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--primary-color);
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 1rem;
+      padding: 8px 16px;
+      background-color: #e0f2fe;
+      border-radius: 6px;
+      transition: var(--transition);
+    }
+    .back-link:hover {
+      background-color: var(--primary-color);
+      color: #ffffff;
+    }
+    .github-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background-color: #1e293b;
+      color: #ffffff;
+      padding: 8px 16px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: var(--transition);
+    }
+    .github-btn:hover {
+      background-color: #0f172a;
+    }
+    .project-header-card {
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 10px;
+      border: 1px solid var(--border-color);
+      margin-bottom: 30px;
+      box-shadow: var(--shadow-sm);
+    }
+    .project-badge {
+      display: inline-block;
+      background: #ecfdf5;
+      color: #047857;
+      font-size: 0.85rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 20px;
+      margin-bottom: 12px;
+    }
+    .detail-card {
+      background-color: #ffffff;
+      padding: 25px;
+      border-radius: 10px;
+      border: 1px solid var(--border-color);
+      margin-bottom: 25px;
+      box-shadow: var(--shadow-sm);
+    }
+    .detail-card h3 {
+      color: var(--primary-color);
+      margin-bottom: 12px;
+      border-bottom: 2px solid var(--border-color);
+      padding-bottom: 6px;
+    }
+    .tech-stack-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 10px;
+    }
+    .tech-tag {
+      background-color: #f1f5f9;
+      color: #334155;
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      border: 1px solid var(--border-color);
+    }
+    .edu-summary-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+    .edu-summary-table th, .edu-summary-table td {
+      border: 1px solid var(--border-color);
+      padding: 10px 14px;
+      text-align: left;
+    }
+    .edu-summary-table th {
+      background-color: #f8fafc;
+      color: var(--text-main);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation header -->
+  <header class="header">
+    <nav class="navbar">
+      <div class="logo">Kishore Kumar<span>.</span></div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#projects">All Projects</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="project-page-container">
+    
+    <div class="back-nav">
+      <a href="index.html" class="back-link">&larr; Back to Portfolio</a>
+      <a href="https://github.com/Kishorekumar-2004" target="_blank" class="github-btn">🐙 View on GitHub</a>
+    </div>
+
+    <!-- Project Overview -->
+    <section class="project-header-card">
+      <span class="project-badge">Web Architecture &amp; UI</span>
+      <h1>Personal Portfolio Website</h1>
+      <p style="margin-top: 10px; color: #475569; line-height: 1.7;">
+        <strong>Project Summary from Resume:</strong> A single-page personal portfolio built with HTML, CSS, and 
+        JavaScript showcasing technical skills, featured engineering projects, formal education, and verified contact 
+        channels. Features a clean layout, smooth navigation, and is easily deployable online.
+      </p>
+    </section>
+
+    <!-- Technologies Used -->
+    <div class="detail-card">
+      <h3>Technologies Used</h3>
+      <div class="tech-stack-row">
+        <span class="tech-tag">HTML5 Semantic Elements</span>
+        <span class="tech-tag">CSS3 (Grid &amp; Flexbox)</span>
+        <span class="tech-tag">Responsive Media Queries</span>
+        <span class="tech-tag">Smooth Anchor Scrolling</span>
+        <span class="tech-tag">GitHub Pages Ready</span>
+      </div>
+    </div>
+
+    <!-- Architecture & Design Principles -->
+    <div class="detail-card">
+      <h3>Design &amp; Architecture Principles</h3>
+      <ul style="margin-left: 20px; line-height: 1.8;">
+        <li><strong>Zero Bloat:</strong> Built without heavy third-party CSS or JS frameworks, ensuring sub-second load times.</li>
+        <li><strong>Strict Semantic Structure:</strong> Organized using modern HTML tags (<code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;footer&gt;</code>).</li>
+        <li><strong>Responsive First:</strong> Designed with a fluid 1-column layout for mobile and clean multi-column layouts for desktops.</li>
+        <li><strong>Standard-Compliant Form:</strong> Features semantic inputs, field labels, and HTML5 client-side validation attributes.</li>
+      </ul>
+    </div>
+
+    <!-- Resume Education Overview -->
+    <div class="detail-card">
+      <h3>Integrated Academic Credentials</h3>
+      <table class="edu-summary-table">
+        <thead>
+          <tr>
+            <th>Level</th>
+            <th>Institution</th>
+            <th>Period</th>
+            <th>Grade</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>B.E. (CSE)</strong></td>
+            <td>P.S.N.A College Of Engineering And Technology</td>
+            <td>2023 – 2026</td>
+            <td><strong>GPA: 8.22 / 10</strong></td>
+          </tr>
+          <tr>
+            <td><strong>DCE (CE)</strong></td>
+            <td>Rathnavel Subramaniam Polytechnic College</td>
+            <td>2020 – 2023</td>
+            <td><strong>GPA: 9.4 / 10</strong></td>
+          </tr>
+          <tr>
+            <td><strong>HSC</strong></td>
+            <td>PRNP Vidhya Mandhir HR.SEC School</td>
+            <td>2019 – 2020</td>
+            <td><strong>64%</strong></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2026 Kishore Kumar K. All Rights Reserved. Built with pure HTML &amp; CSS.</p>
+  </footer>
+
+</body>
+</html>

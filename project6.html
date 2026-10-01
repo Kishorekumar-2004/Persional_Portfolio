@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multimedia Website - Project 6 | Kishore Kumar</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Specific styles for Project 6: Multimedia Website */
+    .project-page-container {
+      max-width: 850px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    .back-nav {
+      margin-bottom: 25px;
+    }
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--primary-color);
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 1rem;
+      padding: 8px 16px;
+      background-color: #e0f2fe;
+      border-radius: 6px;
+      transition: var(--transition);
+    }
+    .back-link:hover {
+      background-color: var(--primary-color);
+      color: #ffffff;
+    }
+    .media-card {
+      background-color: #ffffff;
+      padding: 25px;
+      border-radius: 10px;
+      border: 1px solid var(--border-color);
+      margin-bottom: 25px;
+      box-shadow: var(--shadow-sm);
+    }
+    .media-card h3 {
+      color: var(--primary-color);
+      margin-bottom: 12px;
+      border-bottom: 2px solid var(--border-color);
+      padding-bottom: 6px;
+    }
+    .media-player-box {
+      background-color: #f8fafc;
+      padding: 20px;
+      border-radius: 8px;
+      border: 1px dashed var(--border-color);
+      text-align: center;
+      margin-top: 15px;
+    }
+    audio, video {
+      width: 100%;
+      max-width: 600px;
+      margin: 10px 0;
+    }
+    figure {
+      margin: 15px 0;
+      text-align: center;
+    }
+    figcaption {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-top: 8px;
+    }
+    .svg-graphic {
+      width: 100%;
+      max-width: 400px;
+      height: 180px;
+      margin: 0 auto;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation header -->
+  <header class="header">
+    <nav class="navbar">
+      <div class="logo">Kishore<span>.</span></div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#projects">All Projects</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="project-page-container">
+    
+    <!-- Back to Portfolio link -->
+    <div class="back-nav" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px; flex-wrap: wrap; gap: 10px;">
+      <a href="index.html" class="back-link">&larr; Back to Portfolio</a>
+      <a href="https://github.com/Kishorekumar-2004" target="_blank" style="background-color: #1e293b; color: #ffffff; padding: 8px 16px; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 0.95rem;">🐙 View on GitHub</a>
+    </div>
+
+    <!-- Project Overview -->
+    <div class="media-card">
+      <span class="greeting">Project Showcase #6</span>
+      <h1>Multimedia Website</h1>
+      <p style="margin-bottom: 0;">
+        <strong>Description:</strong> A website containing multimedia content such as images, 
+        audio, and video. HTML5 introduced native media elements like &lt;video&gt;, &lt;audio&gt;, 
+        and &lt;figure&gt; without requiring third-party plugins.
+      </p>
+    </div>
+
+    <!-- 1. HTML5 Audio Demonstration -->
+    <div class="media-card">
+      <h3>1. HTML5 Audio Player (&lt;audio&gt;)</h3>
+      <p>The <code>&lt;audio&gt;</code> element with the <code>controls</code> attribute provides play, pause, and volume controls:</p>
+      
+      <div class="media-player-box">
+        <p><strong>Sample Audio Track:</strong></p>
+        <!-- Standard HTML5 Audio element -->
+        <audio controls>
+          <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+          Your browser does not support the audio tag.
+        </audio>
+        <p style="font-size: 0.85rem; color: var(--text-muted);">Format: MP3 Audio Stream</p>
+      </div>
+    </div>
+
+    <!-- 2. HTML5 Video Demonstration -->
+    <div class="media-card">
+      <h3>2. HTML5 Video Player (&lt;video&gt;)</h3>
+      <p>The <code>&lt;video&gt;</code> element allows embedding video files natively with playback controls:</p>
+      
+      <div class="media-player-box">
+        <!-- Standard HTML5 Video element -->
+        <video controls poster="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='600' height='340' viewBox='0 0 600 340'><rect fill='%231e293b' width='600' height='340'/><text fill='%23ffffff' font-family='sans-serif' font-size='24' x='50%25' y='50%25' text-anchor='middle'>HTML5 Video Sample (Big Buck Bunny)</text></svg>">
+          <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <p style="font-size: 0.85rem; color: var(--text-muted);">Format: MP4 (H.264 / AAC)</p>
+      </div>
+    </div>
+
+    <!-- 3. Semantic Figure and Caption -->
+    <div class="media-card">
+      <h3>3. Semantic Images &amp; Graphics (&lt;figure&gt; &amp; &lt;figcaption&gt;)</h3>
+      <p>The <code>&lt;figure&gt;</code> tag groups visual elements with an explanatory caption:</p>
+      
+      <figure>
+        <!-- Vector graphic illustration rendered cleanly with SVG -->
+        <svg class="svg-graphic" viewBox="0 0 400 180" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#2563eb;stop-opacity:1" />
+              <stop offset="100%" style="stop-color:#0ea5e9;stop-opacity:1" />
+            </linearGradient>
+          </defs>
+          <rect width="400" height="180" rx="12" fill="url(#grad1)" />
+          <circle cx="200" cy="70" r="35" fill="#ffffff" opacity="0.9" />
+          <polygon points="193,55 215,70 193,85" fill="#2563eb" />
+          <text x="200" y="140" fill="#ffffff" font-size="18" font-family="sans-serif" font-weight="bold" text-anchor="middle">HTML5 Rich Media Ecosystem</text>
+        </svg>
+        <figcaption>Figure 1.1: Audio, video, and vector graphics in modern HTML5 standards.</figcaption>
+      </figure>
+    </div>
+
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2026 Kishore Kumar. All Rights Reserved. Built with HTML &amp; CSS.</p>
+  </footer>
+
+</body>
+</html>

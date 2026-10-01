@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI-Driven Threat Hunting | Kishore Kumar K</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .project-page-container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    .back-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 25px;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--primary-color);
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 1rem;
+      padding: 8px 16px;
+      background-color: #e0f2fe;
+      border-radius: 6px;
+      transition: var(--transition);
+    }
+    .back-link:hover {
+      background-color: var(--primary-color);
+      color: #ffffff;
+    }
+    .github-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background-color: #1e293b;
+      color: #ffffff;
+      padding: 8px 16px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: var(--transition);
+    }
+    .github-btn:hover {
+      background-color: #0f172a;
+    }
+    .project-header-card {
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 10px;
+      border: 1px solid var(--border-color);
+      margin-bottom: 30px;
+      box-shadow: var(--shadow-sm);
+    }
+    .project-badge {
+      display: inline-block;
+      background: #eff6ff;
+      color: var(--primary-color);
+      font-size: 0.85rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 20px;
+      margin-bottom: 12px;
+    }
+    .detail-card {
+      background-color: #ffffff;
+      padding: 25px;
+      border-radius: 10px;
+      border: 1px solid var(--border-color);
+      margin-bottom: 25px;
+      box-shadow: var(--shadow-sm);
+    }
+    .detail-card h3 {
+      color: var(--primary-color);
+      margin-bottom: 12px;
+      border-bottom: 2px solid var(--border-color);
+      padding-bottom: 6px;
+    }
+    /* Threat Hunting Dashboard Mockup */
+    .dashboard-preview {
+      background-color: #0f172a;
+      color: #f8fafc;
+      border-radius: 8px;
+      padding: 20px;
+      margin-top: 15px;
+      font-family: 'Courier New', Courier, monospace;
+    }
+    .dash-stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+    .dash-stat-box {
+      background-color: #1e293b;
+      padding: 12px;
+      border-radius: 6px;
+      border-left: 4px solid var(--secondary-color);
+    }
+    .dash-stat-box.alert {
+      border-left-color: #ef4444;
+    }
+    .dash-stat-val {
+      font-size: 1.4rem;
+      font-weight: bold;
+      color: #ffffff;
+    }
+    .dash-stat-lbl {
+      font-size: 0.8rem;
+      color: #94a3b8;
+    }
+    .dash-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.85rem;
+    }
+    .dash-table th, .dash-table td {
+      padding: 8px;
+      border-bottom: 1px solid #334155;
+      text-align: left;
+    }
+    .dash-table th {
+      color: #38bdf8;
+    }
+    .threat-tag-high {
+      background: #7f1d1d;
+      color: #fca5a5;
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+    .threat-tag-med {
+      background: #78350f;
+      color: #fde68a;
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation header -->
+  <header class="header">
+    <nav class="navbar">
+      <div class="logo">Kishore Kumar<span>.</span></div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#projects">All Projects</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="project-page-container">
+    
+    <div class="back-nav">
+      <a href="index.html" class="back-link">&larr; Back to Portfolio</a>
+      <a href="https://github.com/Kishorekumar-2004" target="_blank" class="github-btn">🐙 View on GitHub</a>
+    </div>
+
+    <!-- Project Overview -->
+    <section class="project-header-card">
+      <span class="project-badge">Cybersecurity &amp; Anomaly Detection</span>
+      <h1>AI-Driven Hybrid Framework for Automated Threat Hunting</h1>
+      <p style="margin-top: 10px; color: #475569; line-height: 1.7;">
+        <strong>Project Summary from Resume:</strong> Built an advanced cybersecurity framework combining statistical 
+        anomaly detection with a rule-based intelligence engine to proactively identify both known and unknown threats 
+        in enterprise network traffic. Includes a real-time web dashboard for threat visualization and SQLite-based logging.
+      </p>
+    </section>
+
+    <!-- Key Architecture & Capabilities -->
+    <div class="detail-card">
+      <h3>Key System Architecture</h3>
+      <ul style="margin-left: 20px; line-height: 1.8;">
+        <li><strong>Statistical Anomaly Detection:</strong> Analyzes network packet entropy, packet frequency bursts, and unusual port access patterns.</li>
+        <li><strong>Rule-Based Intelligence Engine:</strong> Matches known signature profiles (DDoS, port scanning, brute-force attempts) against active streams.</li>
+        <li><strong>SQLite Logging Pipeline:</strong> High-throughput, lightweight event recording enabling fast historical incident investigations.</li>
+        <li><strong>Real-time Dashboard:</strong> Clean user interface for security analysts with instant threat severity alerts.</li>
+      </ul>
+    </div>
+
+    <!-- Interactive Visual Representation -->
+    <div class="detail-card">
+      <h3>Live Dashboard Visualization Demo</h3>
+      <p style="color: var(--text-muted);">Simulated network security telemetry interface:</p>
+      
+      <div class="dashboard-preview">
+        <div class="dash-stats">
+          <div class="dash-stat-box">
+            <div class="dash-stat-val">14,280</div>
+            <div class="dash-stat-lbl">Packets / Sec</div>
+          </div>
+          <div class="dash-stat-box">
+            <div class="dash-stat-val">0.03%</div>
+            <div class="dash-stat-lbl">Anomaly Rate</div>
+          </div>
+          <div class="dash-stat-box alert">
+            <div class="dash-stat-val">3 Active</div>
+            <div class="dash-stat-lbl">Threat Alerts</div>
+          </div>
+        </div>
+
+        <table class="dash-table">
+          <thead>
+            <tr>
+              <th>Timestamp</th>
+              <th>Source IP</th>
+              <th>Destination Port</th>
+              <th>Attack Signature</th>
+              <th>Severity</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>23:14:02</td>
+              <td>192.168.1.104</td>
+              <td>Port 22 (SSH)</td>
+              <td>SSH Brute Force Burst</td>
+              <td><span class="threat-tag-high">HIGH</span></td>
+            </tr>
+            <tr>
+              <td>23:12:45</td>
+              <td>10.0.0.52</td>
+              <td>Port 8080 (HTTP)</td>
+              <td>SYN Flood Anomaly</td>
+              <td><span class="threat-tag-high">HIGH</span></td>
+            </tr>
+            <tr>
+              <td>23:08:19</td>
+              <td>172.16.4.12</td>
+              <td>Port 445 (SMB)</td>
+              <td>Unusual Lateral Probing</td>
+              <td><span class="threat-tag-med">MEDIUM</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2026 Kishore Kumar K. All Rights Reserved. Built with pure HTML &amp; CSS.</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Course Registration Form - Project 4 | Kishore Kumar</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Specific styles for Project 4: Course Registration Form */
+    .project-page-container {
+      max-width: 850px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    .back-nav {
+      margin-bottom: 25px;
+    }
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--primary-color);
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 1rem;
+      padding: 8px 16px;
+      background-color: #e0f2fe;
+      border-radius: 6px;
+      transition: var(--transition);
+    }
+    .back-link:hover {
+      background-color: var(--primary-color);
+      color: #ffffff;
+    }
+    .form-container-card {
+      background-color: #ffffff;
+      padding: 35px;
+      border-radius: 10px;
+      border: 1px solid var(--border-color);
+      box-shadow: var(--shadow-sm);
+      margin-bottom: 30px;
+    }
+    .form-container-card h1 {
+      font-size: 1.8rem;
+      color: var(--text-main);
+      margin-bottom: 8px;
+    }
+    .demo-form {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      margin-top: 20px;
+    }
+    .form-row {
+      display: flex;
+      gap: 20px;
+    }
+    .form-col {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .form-col label {
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: var(--text-main);
+    }
+    .form-col input, 
+    .form-col select, 
+    .form-col textarea {
+      padding: 10px 12px;
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      font-family: inherit;
+      font-size: 0.95rem;
+    }
+    .radio-group, .checkbox-group {
+      display: flex;
+      gap: 15px;
+      align-items: center;
+      margin-top: 4px;
+    }
+    .radio-group label, .checkbox-group label {
+      font-weight: normal;
+      cursor: pointer;
+    }
+    .btn-row {
+      display: flex;
+      gap: 15px;
+      margin-top: 10px;
+    }
+    @media (max-width: 600px) {
+      .form-row {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation header -->
+  <header class="header">
+    <nav class="navbar">
+      <div class="logo">Kishore<span>.</span></div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#projects">All Projects</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="project-page-container">
+    
+    <!-- Back to Portfolio link -->
+    <div class="back-nav" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px; flex-wrap: wrap; gap: 10px;">
+      <a href="index.html" class="back-link">&larr; Back to Portfolio</a>
+      <a href="https://github.com/Kishorekumar-2004" target="_blank" style="background-color: #1e293b; color: #ffffff; padding: 8px 16px; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 0.95rem;">🐙 View on GitHub</a>
+    </div>
+
+    <!-- Registration Form Card -->
+    <div class="form-container-card">
+      <span class="greeting">Project Showcase #4</span>
+      <h1>Course Registration Form</h1>
+      <p>
+        <strong>Description:</strong> A course registration form created using HTML forms. 
+        It demonstrates the use of diverse input types including text, email, tel, date, radio buttons, 
+        select dropdowns, checkboxes, and buttons.
+      </p>
+
+      <hr style="margin: 20px 0; border: none; border-top: 1px solid var(--border-color);">
+
+      <!-- Actual Demo Form -->
+      <form class="demo-form" action="#" method="get">
+        
+        <!-- Full Name and Email Row -->
+        <div class="form-row">
+          <div class="form-col">
+            <label for="student-name">Student Full Name *</label>
+            <input type="text" id="student-name" name="student_name" placeholder="e.g. Kishore Kumar" required>
+          </div>
+          <div class="form-col">
+            <label for="student-email">Email Address *</label>
+            <input type="email" id="student-email" name="student_email" placeholder="e.g. kishore@example.com" required>
+          </div>
+        </div>
+
+        <!-- Phone and Date of Birth Row -->
+        <div class="form-row">
+          <div class="form-col">
+            <label for="student-phone">Phone Number</label>
+            <input type="tel" id="student-phone" name="student_phone" placeholder="e.g. +91 9876543210">
+          </div>
+          <div class="form-col">
+            <label for="student-dob">Date of Birth</label>
+            <input type="date" id="student-dob" name="student_dob">
+          </div>
+        </div>
+
+        <!-- Gender Radio Buttons -->
+        <div class="form-col">
+          <label>Gender:</label>
+          <div class="radio-group">
+            <label><input type="radio" name="gender" value="male" checked> Male</label>
+            <label><input type="radio" name="gender" value="female"> Female</label>
+            <label><input type="radio" name="gender" value="other"> Other</label>
+          </div>
+        </div>
+
+        <!-- Select Course Dropdown -->
+        <div class="form-col">
+          <label for="course-select">Select Course *</label>
+          <select id="course-select" name="course" required>
+            <option value="">-- Choose a Course --</option>
+            <option value="fsd-java">Full Stack Java Development (Spring Boot + Web)</option>
+            <option value="fsd-js">Full Stack JavaScript Development (MERN)</option>
+            <option value="frontend">Responsive Frontend Web Development (HTML/CSS/JS)</option>
+            <option value="database">Database Management with MySQL &amp; MongoDB</option>
+          </select>
+        </div>
+
+        <!-- Checkboxes for Areas of Interest -->
+        <div class="form-col">
+          <label>Preferred Learning Modes:</label>
+          <div class="checkbox-group">
+            <label><input type="checkbox" name="mode" value="online" checked> Online Live Classes</label>
+            <label><input type="checkbox" name="mode" value="weekend"> Weekend Batches</label>
+            <label><input type="checkbox" name="mode" value="recorded"> Self-Paced Videos</label>
+          </div>
+        </div>
+
+        <!-- Additional Comments -->
+        <div class="form-col">
+          <label for="comments">Any Questions or Comments:</label>
+          <textarea id="comments" name="comments" rows="3" placeholder="Tell us about your learning goals..."></textarea>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="btn-row">
+          <button type="submit" class="btn btn-primary">Submit Registration</button>
+          <button type="reset" class="btn btn-secondary">Reset Form</button>
+        </div>
+
+      </form>
+    </div>
+
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2026 Kishore Kumar. All Rights Reserved. Built with HTML &amp; CSS.</p>
+  </footer>
+
+</body>
+</html>

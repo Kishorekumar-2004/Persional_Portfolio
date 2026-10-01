@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MiniGPT Local Chat System | Kishore Kumar K</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .project-page-container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    .back-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 25px;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--primary-color);
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 1rem;
+      padding: 8px 16px;
+      background-color: #e0f2fe;
+      border-radius: 6px;
+      transition: var(--transition);
+    }
+    .back-link:hover {
+      background-color: var(--primary-color);
+      color: #ffffff;
+    }
+    .github-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background-color: #1e293b;
+      color: #ffffff;
+      padding: 8px 16px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: var(--transition);
+    }
+    .github-btn:hover {
+      background-color: #0f172a;
+    }
+    .project-header-card {
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 10px;
+      border: 1px solid var(--border-color);
+      margin-bottom: 30px;
+      box-shadow: var(--shadow-sm);
+    }
+    .project-badge {
+      display: inline-block;
+      background: #e0e7ff;
+      color: #3730a3;
+      font-size: 0.85rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 20px;
+      margin-bottom: 12px;
+    }
+    .detail-card {
+      background-color: #ffffff;
+      padding: 25px;
+      border-radius: 10px;
+      border: 1px solid var(--border-color);
+      margin-bottom: 25px;
+      box-shadow: var(--shadow-sm);
+    }
+    .detail-card h3 {
+      color: var(--primary-color);
+      margin-bottom: 12px;
+      border-bottom: 2px solid var(--border-color);
+      padding-bottom: 6px;
+    }
+    /* Chat Interface Simulation */
+    .chat-window {
+      background-color: #f8fafc;
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      overflow: hidden;
+      margin-top: 15px;
+    }
+    .chat-top-status {
+      background-color: #1e293b;
+      color: #ffffff;
+      padding: 12px 18px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.9rem;
+    }
+    .offline-badge {
+      background: #10b981;
+      color: #ffffff;
+      font-size: 0.75rem;
+      padding: 2px 8px;
+      border-radius: 10px;
+      font-weight: bold;
+    }
+    .chat-body {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    .chat-bubble {
+      max-width: 80%;
+      padding: 12px 16px;
+      border-radius: 12px;
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+    .chat-user {
+      align-self: flex-end;
+      background-color: var(--primary-color);
+      color: #ffffff;
+      border-bottom-right-radius: 2px;
+    }
+    .chat-ai {
+      align-self: flex-start;
+      background-color: #ffffff;
+      border: 1px solid var(--border-color);
+      color: var(--text-main);
+      border-bottom-left-radius: 2px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation header -->
+  <header class="header">
+    <nav class="navbar">
+      <div class="logo">Kishore Kumar<span>.</span></div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#projects">All Projects</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="project-page-container">
+    
+    <div class="back-nav">
+      <a href="index.html" class="back-link">&larr; Back to Portfolio</a>
+      <a href="https://github.com/Kishorekumar-2004" target="_blank" class="github-btn">🐙 View on GitHub</a>
+    </div>
+
+    <!-- Project Overview -->
+    <section class="project-header-card">
+      <span class="project-badge">Local LLM &amp; Privacy-First AI</span>
+      <h1>MiniGPT-Based Local Chat System</h1>
+      <p style="margin-top: 10px; color: #475569; line-height: 1.7;">
+        <strong>Project Summary from Resume:</strong> Developed a fully offline chat system powered by a local LLM 
+        ensuring complete data privacy with no external API dependency. Features a responsive browser-based interface 
+        with message history and lightweight performance on standard consumer hardware.
+      </p>
+    </section>
+
+    <!-- Key Architecture & Features -->
+    <div class="detail-card">
+      <h3>Key System Highlights</h3>
+      <ul style="margin-left: 20px; line-height: 1.8;">
+        <li><strong>100% Offline &amp; Air-Gapped:</strong> Zero telemetry or data packets sent to cloud providers, keeping confidential conversations secure.</li>
+        <li><strong>Quantized Local Weights:</strong> Optimized for consumer-grade CPU/GPU memory footprint with low token-generation latency.</li>
+        <li><strong>Session &amp; Message History:</strong> Local storage / browser-level persistent chat threading and context preservation.</li>
+        <li><strong>Clean Responsive Frontend:</strong> Streamlined UI supporting quick prompts, multi-turn reasoning, and code block formatting.</li>
+      </ul>
+    </div>
+
+    <!-- Interactive UI Simulation -->
+    <div class="detail-card">
+      <h3>Browser Interface Mockup</h3>
+      <div class="chat-window">
+        <div class="chat-top-status">
+          <span>🤖 <strong>MiniGPT-Local</strong> (Model: Q4_K_M Quantized)</span>
+          <span class="offline-badge">● Fully Offline</span>
+        </div>
+        <div class="chat-body">
+          <div class="chat-bubble chat-user">
+            Can you explain the main advantage of running a local LLM instead of using cloud APIs?
+          </div>
+          <div class="chat-bubble chat-ai">
+            Running a local LLM guarantees <strong>complete data privacy</strong> since no proprietary prompt or code snippet leaves your machine. It also ensures zero subscription costs, eliminates rate limits, and operates reliably without an active internet connection.
+          </div>
+          <div class="chat-bubble chat-user">
+            What hardware specs does it need?
+          </div>
+          <div class="chat-bubble chat-ai">
+            With 4-bit quantization, lightweight models (1B to 3B parameters) run smoothly on ordinary laptops with 8GB RAM using CPU-only inference, while GPU acceleration provides ultra-fast generation!
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2026 Kishore Kumar K. All Rights Reserved. Built with pure HTML &amp; CSS.</p>
+  </footer>
+
+</body>
+</html>

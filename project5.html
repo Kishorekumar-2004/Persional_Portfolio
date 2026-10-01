@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Blog - Project 5 | Kishore Kumar</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Specific styles for Project 5: Travel Blog */
+    .project-page-container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    .back-nav {
+      margin-bottom: 25px;
+    }
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--primary-color);
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 1rem;
+      padding: 8px 16px;
+      background-color: #e0f2fe;
+      border-radius: 6px;
+      transition: var(--transition);
+    }
+    .back-link:hover {
+      background-color: var(--primary-color);
+      color: #ffffff;
+    }
+    .travel-header {
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 10px;
+      border: 1px solid var(--border-color);
+      margin-bottom: 30px;
+      box-shadow: var(--shadow-sm);
+    }
+    .destinations-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+      margin-bottom: 30px;
+    }
+    .destination-card {
+      background-color: #ffffff;
+      border-radius: 10px;
+      border: 1px solid var(--border-color);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+    }
+    .dest-banner {
+      height: 140px;
+      background: linear-gradient(135deg, #0284c7, #38bdf8);
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+    .dest-info {
+      padding: 20px;
+      flex: 1;
+    }
+    .dest-info h3 {
+      color: var(--text-main);
+      margin-bottom: 8px;
+    }
+    .dest-info p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin-bottom: 12px;
+    }
+    .travel-tips {
+      background-color: #ffffff;
+      padding: 25px;
+      border-radius: 10px;
+      border: 1px solid var(--border-color);
+      box-shadow: var(--shadow-sm);
+    }
+    .travel-tips h3 {
+      color: var(--primary-color);
+      margin-bottom: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation header -->
+  <header class="header">
+    <nav class="navbar">
+      <div class="logo">Kishore<span>.</span></div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#projects">All Projects</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="project-page-container">
+    
+    <!-- Back to Portfolio link & GitHub link -->
+    <div class="back-nav" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px; flex-wrap: wrap; gap: 10px;">
+      <a href="index.html" class="back-link">&larr; Back to Portfolio</a>
+      <a href="https://github.com/Kishorekumar-2004" target="_blank" style="background-color: #1e293b; color: #ffffff; padding: 8px 16px; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 0.95rem;">🐙 View on GitHub</a>
+    </div>
+
+    <!-- Travel Overview -->
+    <div class="travel-header">
+      <span class="greeting">Project Showcase #5</span>
+      <h1>Full Stack Blogging &amp; Travel Platform</h1>
+      <p style="margin-bottom: 0;">
+        <strong>Description:</strong> A content management and travel platform created using HTML, CSS, 
+        and full-stack concepts with Spring Boot and MySQL for article storage and reader feedback.
+      </p>
+    </div>
+
+    <!-- Destinations Grid -->
+    <div class="destinations-grid">
+      
+      <!-- Destination 1 -->
+      <article class="destination-card">
+        <div class="dest-banner" style="background: linear-gradient(135deg, #0f766e, #14b8a6);">
+          🏔️ Manali &amp; Ladakh
+        </div>
+        <div class="dest-info">
+          <h3>The Mighty Himalayas</h3>
+          <p>
+            Experience breathtaking mountain peaks, clear blue lakes, high-altitude passes, 
+            and vibrant Tibetan monasteries in northern India.
+          </p>
+          <p><strong>Best Time:</strong> May to September</p>
+        </div>
+      </article>
+
+      <!-- Destination 2 -->
+      <article class="destination-card">
+        <div class="dest-banner" style="background: linear-gradient(135deg, #0369a1, #38bdf8);">
+          🏖️ Goa &amp; Kerala
+        </div>
+        <div class="dest-info">
+          <h3>Sun, Sand &amp; Backwaters</h3>
+          <p>
+            Relax beside golden sand beaches, explore historic Portuguese architecture, and sail 
+            through tranquil palm-fringed backwaters in houseboats.
+          </p>
+          <p><strong>Best Time:</strong> November to February</p>
+        </div>
+      </article>
+
+      <!-- Destination 3 -->
+      <article class="destination-card">
+        <div class="dest-banner" style="background: linear-gradient(135deg, #b45309, #f59e0b);">
+          🏰 Jaipur &amp; Udaipur
+        </div>
+        <div class="dest-info">
+          <h3>The Royal Heritage</h3>
+          <p>
+            Immerse yourself in glorious forts, magnificent palaces, vibrant cultural markets, 
+            and traditional royal cuisine in Rajasthan.
+          </p>
+          <p><strong>Best Time:</strong> October to March</p>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- Travel Tips Section -->
+    <div class="travel-tips">
+      <h3>Essential Travel Tips for Beginners</h3>
+      <ol style="margin-left: 20px; line-height: 1.8;">
+        <li>Always book transportation and accommodation ahead of peak vacation seasons.</li>
+        <li>Keep digital and printed photocopies of your primary identification documents.</li>
+        <li>Carry lightweight, weather-appropriate clothing and comfortable walking shoes.</li>
+        <li>Respect local customs, traditions, and maintain environmental cleanliness.</li>
+      </ol>
+    </div>
+
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2026 Kishore Kumar. All Rights Reserved. Built with HTML &amp; CSS.</p>
+  </footer>
+
+</body>
+</html>
