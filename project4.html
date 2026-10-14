@@ -3,17 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Course Registration Form - Project 4 | Kishore Kumar</title>
+  <title>To-Do List App | Kishore Kumar K</title>
   <link rel="stylesheet" href="style.css">
   <style>
-    /* Specific styles for Project 4: Course Registration Form */
     .project-page-container {
-      max-width: 850px;
+      max-width: 900px;
       margin: 40px auto;
       padding: 0 20px;
     }
     .back-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       margin-bottom: 25px;
+      flex-wrap: wrap;
+      gap: 10px;
     }
     .back-link {
       display: inline-flex;
@@ -32,68 +36,177 @@
       background-color: var(--primary-color);
       color: #ffffff;
     }
-    .form-container-card {
-      background-color: #ffffff;
-      padding: 35px;
-      border-radius: 10px;
-      border: 1px solid var(--border-color);
-      box-shadow: var(--shadow-sm);
-      margin-bottom: 30px;
-    }
-    .form-container-card h1 {
-      font-size: 1.8rem;
-      color: var(--text-main);
-      margin-bottom: 8px;
-    }
-    .demo-form {
-      display: flex;
-      flex-direction: column;
-      gap: 18px;
-      margin-top: 20px;
-    }
-    .form-row {
-      display: flex;
-      gap: 20px;
-    }
-    .form-col {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-    }
-    .form-col label {
+    .github-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background-color: #1e293b;
+      color: #ffffff;
+      padding: 8px 16px;
+      border-radius: 6px;
+      text-decoration: none;
       font-weight: 600;
       font-size: 0.95rem;
-      color: var(--text-main);
+      transition: var(--transition);
     }
-    .form-col input, 
-    .form-col select, 
-    .form-col textarea {
-      padding: 10px 12px;
+    .github-btn:hover {
+      background-color: #0f172a;
+    }
+    .project-header-card {
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 10px;
       border: 1px solid var(--border-color);
-      border-radius: 6px;
-      font-family: inherit;
-      font-size: 0.95rem;
+      margin-bottom: 30px;
+      box-shadow: var(--shadow-sm);
     }
-    .radio-group, .checkbox-group {
+    .project-badge {
+      display: inline-block;
+      background: #ecfdf5;
+      color: #047857;
+      font-size: 0.85rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 20px;
+      margin-bottom: 12px;
+    }
+    .detail-card {
+      background-color: #ffffff;
+      padding: 25px;
+      border-radius: 10px;
+      border: 1px solid var(--border-color);
+      margin-bottom: 25px;
+      box-shadow: var(--shadow-sm);
+    }
+    .detail-card h3 {
+      color: var(--primary-color);
+      margin-bottom: 12px;
+      border-bottom: 2px solid var(--border-color);
+      padding-bottom: 6px;
+    }
+    .tech-stack-row {
       display: flex;
-      gap: 15px;
-      align-items: center;
-      margin-top: 4px;
-    }
-    .radio-group label, .checkbox-group label {
-      font-weight: normal;
-      cursor: pointer;
-    }
-    .btn-row {
-      display: flex;
-      gap: 15px;
+      flex-wrap: wrap;
+      gap: 10px;
       margin-top: 10px;
     }
-    @media (max-width: 600px) {
-      .form-row {
-        flex-direction: column;
-      }
+    .tech-tag {
+      background-color: #f1f5f9;
+      color: #334155;
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      border: 1px solid var(--border-color);
+    }
+    /* Interactive Todo Mockup */
+    .todo-app-preview {
+      background-color: #0f172a;
+      color: #f8fafc;
+      border-radius: 10px;
+      padding: 25px;
+      margin-top: 15px;
+      font-family: inherit;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      box-shadow: var(--shadow-md);
+    }
+    .todo-top-stats {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid #334155;
+    }
+    .todo-stat-pill {
+      background-color: #1e293b;
+      padding: 4px 12px;
+      border-radius: 12px;
+      font-size: 0.85rem;
+      color: #38bdf8;
+    }
+    .todo-input-bar {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+    .todo-input-bar input {
+      flex: 1;
+      background: #1e293b;
+      border: 1px solid #334155;
+      color: #ffffff;
+      padding: 10px 14px;
+      border-radius: 6px;
+      outline: none;
+    }
+    .todo-input-bar button {
+      background: #10b981;
+      color: #ffffff;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .todo-tabs {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 15px;
+    }
+    .todo-tab {
+      padding: 4px 12px;
+      border-radius: 6px;
+      font-size: 0.82rem;
+      background: #1e293b;
+      color: #94a3b8;
+      cursor: pointer;
+    }
+    .todo-tab.active {
+      background: #0ea5e9;
+      color: #ffffff;
+      font-weight: bold;
+    }
+    .todo-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .todo-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #1e293b;
+      padding: 12px 14px;
+      border-radius: 6px;
+      border-left: 4px solid #10b981;
+    }
+    .todo-item.pending {
+      border-left-color: #f59e0b;
+    }
+    .todo-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .todo-completed-text {
+      text-decoration: line-through;
+      color: #94a3b8;
+    }
+    .todo-actions {
+      display: flex;
+      gap: 8px;
+      font-size: 0.9rem;
+    }
+    .todo-btn-edit {
+      color: #38bdf8;
+      cursor: pointer;
+    }
+    .todo-btn-del {
+      color: #f87171;
+      cursor: pointer;
     }
   </style>
 </head>
@@ -102,7 +215,7 @@
   <!-- Navigation header -->
   <header class="header">
     <nav class="navbar">
-      <div class="logo">Kishore<span>.</span></div>
+      <div class="logo">Kishore Kumar<span>.</span></div>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="index.html#projects">All Projects</a></li>
@@ -113,102 +226,108 @@
 
   <main class="project-page-container">
     
-    <!-- Back to Portfolio link -->
-    <div class="back-nav" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px; flex-wrap: wrap; gap: 10px;">
+    <div class="back-nav">
       <a href="index.html" class="back-link">&larr; Back to Portfolio</a>
-      <a href="https://github.com/Kishorekumar-2004" target="_blank" style="background-color: #1e293b; color: #ffffff; padding: 8px 16px; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 0.95rem;">🐙 View on GitHub</a>
+      <a href="https://github.com/Kishorekumar-2004/Todo-List-App" target="_blank" class="github-btn">🐙 View on GitHub</a>
     </div>
 
-    <!-- Registration Form Card -->
-    <div class="form-container-card">
-      <span class="greeting">Project Showcase #4</span>
-      <h1>Course Registration Form</h1>
-      <p>
-        <strong>Description:</strong> A course registration form created using HTML forms. 
-        It demonstrates the use of diverse input types including text, email, tel, date, radio buttons, 
-        select dropdowns, checkboxes, and buttons.
+    <!-- Project Overview -->
+    <section class="project-header-card">
+      <span class="project-badge">Web Application &amp; State Management</span>
+      <h1>To-Do List App ✅</h1>
+      <p style="margin-top: 10px; color: #475569; line-height: 1.7;">
+        <strong>Project Summary from GitHub:</strong> A clean, fully functional task manager built with pure 
+        <strong>HTML, CSS, and vanilla JavaScript</strong>. Add tasks, edit them inline, mark as complete, 
+        and delete — all saved persistently in browser <code>localStorage</code> so your tasks survive page refreshes.
       </p>
+    </section>
 
-      <hr style="margin: 20px 0; border: none; border-top: 1px solid var(--border-color);">
+    <!-- Technologies Used -->
+    <div class="detail-card">
+      <h3>Tech Stack</h3>
+      <div class="tech-stack-row">
+        <span class="tech-tag">HTML5 Semantic Structure</span>
+        <span class="tech-tag">CSS3 Flexbox &amp; Dark Theme</span>
+        <span class="tech-tag">Vanilla JavaScript (ES6+)</span>
+        <span class="tech-tag">DOM Manipulation</span>
+        <span class="tech-tag">Browser LocalStorage API</span>
+      </div>
+    </div>
 
-      <!-- Actual Demo Form -->
-      <form class="demo-form" action="#" method="get">
-        
-        <!-- Full Name and Email Row -->
-        <div class="form-row">
-          <div class="form-col">
-            <label for="student-name">Student Full Name *</label>
-            <input type="text" id="student-name" name="student_name" placeholder="e.g. Kishore Kumar" required>
-          </div>
-          <div class="form-col">
-            <label for="student-email">Email Address *</label>
-            <input type="email" id="student-email" name="student_email" placeholder="e.g. kishore@example.com" required>
-          </div>
+    <!-- Key Features -->
+    <div class="detail-card">
+      <h3>Key Features</h3>
+      <ul style="margin-left: 20px; line-height: 1.8;">
+        <li>➕ <strong>Add Tasks:</strong> Type and press Enter or click the Add button.</li>
+        <li>✏️ <strong>Inline Editing:</strong> Click edit to modify and rename any active task directly.</li>
+        <li>✅ <strong>Mark Complete:</strong> Toggle tasks done/undone with animated checkboxes and strikethroughs.</li>
+        <li>🗑️ <strong>Instant Deletion:</strong> Quickly remove completed or unwanted tasks.</li>
+        <li>🔍 <strong>Filter Tabs:</strong> Seamlessly switch between All, Active, and Completed views.</li>
+        <li>💾 <strong>Auto-Save (LocalStorage):</strong> Automatic browser serialization ensures zero data loss.</li>
+        <li>📊 <strong>Live Counter Stats:</strong> Real-time display showing total items and pending completion count.</li>
+      </ul>
+    </div>
+
+    <!-- Interactive UI Simulation -->
+    <div class="detail-card">
+      <h3>App Interface Simulation</h3>
+      <p style="color: var(--text-muted); margin-bottom: 15px;">Simulated task manager layout with dark-theme styling:</p>
+      
+      <div class="todo-app-preview">
+        <div class="todo-top-stats">
+          <span style="font-weight: bold; font-size: 1.1rem;">📝 My Tasks</span>
+          <span class="todo-stat-pill">3 Total • 1 Completed</span>
         </div>
 
-        <!-- Phone and Date of Birth Row -->
-        <div class="form-row">
-          <div class="form-col">
-            <label for="student-phone">Phone Number</label>
-            <input type="tel" id="student-phone" name="student_phone" placeholder="e.g. +91 9876543210">
-          </div>
-          <div class="form-col">
-            <label for="student-dob">Date of Birth</label>
-            <input type="date" id="student-dob" name="student_dob">
-          </div>
+        <div class="todo-input-bar">
+          <input type="text" value="Implement Spring Boot REST endpoints" readonly>
+          <button type="button">+ Add</button>
         </div>
 
-        <!-- Gender Radio Buttons -->
-        <div class="form-col">
-          <label>Gender:</label>
-          <div class="radio-group">
-            <label><input type="radio" name="gender" value="male" checked> Male</label>
-            <label><input type="radio" name="gender" value="female"> Female</label>
-            <label><input type="radio" name="gender" value="other"> Other</label>
-          </div>
+        <div class="todo-tabs">
+          <span class="todo-tab active">All</span>
+          <span class="todo-tab">Active (2)</span>
+          <span class="todo-tab">Completed (1)</span>
         </div>
 
-        <!-- Select Course Dropdown -->
-        <div class="form-col">
-          <label for="course-select">Select Course *</label>
-          <select id="course-select" name="course" required>
-            <option value="">-- Choose a Course --</option>
-            <option value="fsd-java">Full Stack Java Development (Spring Boot + Web)</option>
-            <option value="fsd-js">Full Stack JavaScript Development (MERN)</option>
-            <option value="frontend">Responsive Frontend Web Development (HTML/CSS/JS)</option>
-            <option value="database">Database Management with MySQL &amp; MongoDB</option>
-          </select>
-        </div>
-
-        <!-- Checkboxes for Areas of Interest -->
-        <div class="form-col">
-          <label>Preferred Learning Modes:</label>
-          <div class="checkbox-group">
-            <label><input type="checkbox" name="mode" value="online" checked> Online Live Classes</label>
-            <label><input type="checkbox" name="mode" value="weekend"> Weekend Batches</label>
-            <label><input type="checkbox" name="mode" value="recorded"> Self-Paced Videos</label>
-          </div>
-        </div>
-
-        <!-- Additional Comments -->
-        <div class="form-col">
-          <label for="comments">Any Questions or Comments:</label>
-          <textarea id="comments" name="comments" rows="3" placeholder="Tell us about your learning goals..."></textarea>
-        </div>
-
-        <!-- Action Buttons -->
-        <div class="btn-row">
-          <button type="submit" class="btn btn-primary">Submit Registration</button>
-          <button type="reset" class="btn btn-secondary">Reset Form</button>
-        </div>
-
-      </form>
+        <ul class="todo-list">
+          <li class="todo-item">
+            <div class="todo-left">
+              <span>☑️</span>
+              <span class="todo-completed-text">Study Java Core Collections &amp; OOP</span>
+            </div>
+            <div class="todo-actions">
+              <span class="todo-btn-del">🗑️</span>
+            </div>
+          </li>
+          <li class="todo-item pending">
+            <div class="todo-left">
+              <span>⬜</span>
+              <span>Build React &amp; Vite E-Commerce Store</span>
+            </div>
+            <div class="todo-actions">
+              <span class="todo-btn-edit">✏️</span>
+              <span class="todo-btn-del">🗑️</span>
+            </div>
+          </li>
+          <li class="todo-item pending">
+            <div class="todo-left">
+              <span>⬜</span>
+              <span>Deploy Portfolio Website on Vercel</span>
+            </div>
+            <div class="todo-actions">
+              <span class="todo-btn-edit">✏️</span>
+              <span class="todo-btn-del">🗑️</span>
+            </div>
+          </li>
+        </ul>
+      </div>
     </div>
 
   </main>
 
   <footer class="footer">
-    <p>&copy; 2026 Kishore Kumar. All Rights Reserved. Built with HTML &amp; CSS.</p>
+    <p>&copy; 2026 Kishore Kumar K. All Rights Reserved. Built with pure HTML &amp; CSS.</p>
   </footer>
 
 </body>

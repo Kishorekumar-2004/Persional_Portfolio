@@ -3,17 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Travel Blog - Project 5 | Kishore Kumar</title>
+  <title>Gadget Store E-Commerce (React) | Kishore Kumar K</title>
   <link rel="stylesheet" href="style.css">
   <style>
-    /* Specific styles for Project 5: Travel Blog */
     .project-page-container {
       max-width: 900px;
       margin: 40px auto;
       padding: 0 20px;
     }
     .back-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       margin-bottom: 25px;
+      flex-wrap: wrap;
+      gap: 10px;
     }
     .back-link {
       display: inline-flex;
@@ -32,7 +36,23 @@
       background-color: var(--primary-color);
       color: #ffffff;
     }
-    .travel-header {
+    .github-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background-color: #1e293b;
+      color: #ffffff;
+      padding: 8px 16px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: var(--transition);
+    }
+    .github-btn:hover {
+      background-color: #0f172a;
+    }
+    .project-header-card {
       background-color: #ffffff;
       padding: 30px;
       border-radius: 10px;
@@ -40,55 +60,146 @@
       margin-bottom: 30px;
       box-shadow: var(--shadow-sm);
     }
-    .destinations-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 25px;
-      margin-bottom: 30px;
-    }
-    .destination-card {
-      background-color: #ffffff;
-      border-radius: 10px;
-      border: 1px solid var(--border-color);
-      overflow: hidden;
-      box-shadow: var(--shadow-sm);
-      display: flex;
-      flex-direction: column;
-    }
-    .dest-banner {
-      height: 140px;
-      background: linear-gradient(135deg, #0284c7, #38bdf8);
-      color: #ffffff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.5rem;
+    .project-badge {
+      display: inline-block;
+      background: #e0e7ff;
+      color: #4338ca;
+      font-size: 0.85rem;
       font-weight: 700;
-    }
-    .dest-info {
-      padding: 20px;
-      flex: 1;
-    }
-    .dest-info h3 {
-      color: var(--text-main);
-      margin-bottom: 8px;
-    }
-    .dest-info p {
-      color: var(--text-muted);
-      font-size: 0.95rem;
-      line-height: 1.6;
+      padding: 4px 12px;
+      border-radius: 20px;
       margin-bottom: 12px;
     }
-    .travel-tips {
+    .detail-card {
       background-color: #ffffff;
       padding: 25px;
       border-radius: 10px;
       border: 1px solid var(--border-color);
+      margin-bottom: 25px;
       box-shadow: var(--shadow-sm);
     }
-    .travel-tips h3 {
+    .detail-card h3 {
       color: var(--primary-color);
-      margin-bottom: 15px;
+      margin-bottom: 12px;
+      border-bottom: 2px solid var(--border-color);
+      padding-bottom: 6px;
+    }
+    .tech-stack-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 10px;
+    }
+    .tech-tag {
+      background-color: #f1f5f9;
+      color: #334155;
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      border: 1px solid var(--border-color);
+    }
+    /* E-Commerce Store Mockup */
+    .store-mockup {
+      background: #1e1b4b;
+      color: #f8fafc;
+      border-radius: 10px;
+      padding: 25px;
+      margin-top: 15px;
+    }
+    .store-navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 15px;
+      border-bottom: 1px solid #312e81;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .store-brand {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #818cf8;
+    }
+    .store-nav-actions {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+    .store-badge-btn {
+      background: #312e81;
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .store-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+    .gadget-card {
+      background: #312e81;
+      border-radius: 8px;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+    .gadget-heart {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      color: #f43f5e;
+      cursor: pointer;
+    }
+    .gadget-img-box {
+      background: #1e1b4b;
+      height: 110px;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.2rem;
+      margin-bottom: 12px;
+    }
+    .gadget-name {
+      font-weight: 600;
+      font-size: 1rem;
+      margin-bottom: 4px;
+    }
+    .gadget-brand {
+      font-size: 0.8rem;
+      color: #a5b4fc;
+      margin-bottom: 10px;
+    }
+    .gadget-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: auto;
+    }
+    .gadget-price {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #38bdf8;
+    }
+    .gadget-qty-control {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: #1e1b4b;
+      padding: 3px 8px;
+      border-radius: 4px;
+    }
+    .qty-btn {
+      color: #818cf8;
+      font-weight: bold;
+      cursor: pointer;
     }
   </style>
 </head>
@@ -97,7 +208,7 @@
   <!-- Navigation header -->
   <header class="header">
     <nav class="navbar">
-      <div class="logo">Kishore<span>.</span></div>
+      <div class="logo">Kishore Kumar<span>.</span></div>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="index.html#projects">All Projects</a></li>
@@ -108,87 +219,123 @@
 
   <main class="project-page-container">
     
-    <!-- Back to Portfolio link & GitHub link -->
-    <div class="back-nav" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px; flex-wrap: wrap; gap: 10px;">
+    <div class="back-nav">
       <a href="index.html" class="back-link">&larr; Back to Portfolio</a>
-      <a href="https://github.com/Kishorekumar-2004" target="_blank" style="background-color: #1e293b; color: #ffffff; padding: 8px 16px; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 0.95rem;">🐙 View on GitHub</a>
+      <a href="https://github.com/Kishorekumar-2004/Gadget_Store-using-React" target="_blank" class="github-btn">🐙 View on GitHub</a>
     </div>
 
-    <!-- Travel Overview -->
-    <div class="travel-header">
-      <span class="greeting">Project Showcase #5</span>
-      <h1>Full Stack Blogging &amp; Travel Platform</h1>
-      <p style="margin-bottom: 0;">
-        <strong>Description:</strong> A content management and travel platform created using HTML, CSS, 
-        and full-stack concepts with Spring Boot and MySQL for article storage and reader feedback.
+    <!-- Project Overview -->
+    <section class="project-header-card">
+      <span class="project-badge">Frontend Development &amp; E-Commerce</span>
+      <h1>Gadget Store E-Commerce (React) 🛒</h1>
+      <p style="margin-top: 10px; color: #475569; line-height: 1.7;">
+        <strong>Project Summary from GitHub:</strong> A modern, responsive e-commerce web application built with 
+        <strong>React and Vite</strong>. It provides an intuitive gadget shopping experience featuring dynamic cart drawers, 
+        interactive wishlist filtering, live search queries, and smooth dark/light theme switching.
       </p>
+    </section>
+
+    <!-- Technologies Used -->
+    <div class="detail-card">
+      <h3>Tech Stack</h3>
+      <div class="tech-stack-row">
+        <span class="tech-tag">React.js (Hooks &amp; Components)</span>
+        <span class="tech-tag">Vite Fast Build Tool</span>
+        <span class="tech-tag">Custom CSS Variables &amp; Theming</span>
+        <span class="tech-tag">Dynamic State Management</span>
+        <span class="tech-tag">Responsive Mobile First UI</span>
+      </div>
     </div>
 
-    <!-- Destinations Grid -->
-    <div class="destinations-grid">
+    <!-- Key Features from README -->
+    <div class="detail-card">
+      <h3>Key Features</h3>
+      <ul style="margin-left: 20px; line-height: 1.8;">
+        <li>🌓 <strong>Dark / Light Mode Toggle:</strong> Smooth theme transition powered by CSS variables and state persistence.</li>
+        <li>🛒 <strong>Slide-out Cart Drawer:</strong>
+          <ul>
+            <li>Interactive on-card quantity controls (<code>-</code> / <code>+</code>)</li>
+            <li>Slide-in cart sidebar with item totals, subtotal calculations, and item counts</li>
+            <li>Instant increment, decrement, and item removal</li>
+          </ul>
+        </li>
+        <li>❤️ <strong>Wishlist Drawer &amp; Filter:</strong>
+          <ul>
+            <li>Heart toggle on product cards with instant visual state feedback</li>
+            <li>Dedicated sliding Wishlist drawer accessible from the top navbar</li>
+            <li>Filter catalog to display wishlisted products only</li>
+          </ul>
+        </li>
+        <li>🔍 <strong>Search &amp; Brand Filtering:</strong> Real-time case-insensitive search by product name and dynamic brand filtering dropdowns.</li>
+      </ul>
+    </div>
+
+    <!-- Interactive UI Simulation -->
+    <div class="detail-card">
+      <h3>Store Interface Mockup</h3>
+      <p style="color: var(--text-muted); margin-bottom: 15px;">Simulated product catalog with cart controls:</p>
       
-      <!-- Destination 1 -->
-      <article class="destination-card">
-        <div class="dest-banner" style="background: linear-gradient(135deg, #0f766e, #14b8a6);">
-          🏔️ Manali &amp; Ladakh
+      <div class="store-mockup">
+        <div class="store-navbar">
+          <div class="store-brand">⚡ GadgetStore</div>
+          <div class="store-nav-actions">
+            <span class="store-badge-btn">🌓 Mode</span>
+            <span class="store-badge-btn">❤️ Wishlist (2)</span>
+            <span class="store-badge-btn" style="background: #4f46e5;">🛒 Cart: 2 ($349)</span>
+          </div>
         </div>
-        <div class="dest-info">
-          <h3>The Mighty Himalayas</h3>
-          <p>
-            Experience breathtaking mountain peaks, clear blue lakes, high-altitude passes, 
-            and vibrant Tibetan monasteries in northern India.
-          </p>
-          <p><strong>Best Time:</strong> May to September</p>
-        </div>
-      </article>
 
-      <!-- Destination 2 -->
-      <article class="destination-card">
-        <div class="dest-banner" style="background: linear-gradient(135deg, #0369a1, #38bdf8);">
-          🏖️ Goa &amp; Kerala
-        </div>
-        <div class="dest-info">
-          <h3>Sun, Sand &amp; Backwaters</h3>
-          <p>
-            Relax beside golden sand beaches, explore historic Portuguese architecture, and sail 
-            through tranquil palm-fringed backwaters in houseboats.
-          </p>
-          <p><strong>Best Time:</strong> November to February</p>
-        </div>
-      </article>
+        <div class="store-cards-grid">
+          
+          <div class="gadget-card">
+            <span class="gadget-heart">❤️</span>
+            <div class="gadget-img-box">🎧</div>
+            <div class="gadget-name">Wireless ANC Headphones</div>
+            <div class="gadget-brand">Sony Audio</div>
+            <div class="gadget-bottom">
+              <span class="gadget-price">$199</span>
+              <div class="gadget-qty-control">
+                <span class="qty-btn">-</span>
+                <span>1</span>
+                <span class="qty-btn">+</span>
+              </div>
+            </div>
+          </div>
 
-      <!-- Destination 3 -->
-      <article class="destination-card">
-        <div class="dest-banner" style="background: linear-gradient(135deg, #b45309, #f59e0b);">
-          🏰 Jaipur &amp; Udaipur
-        </div>
-        <div class="dest-info">
-          <h3>The Royal Heritage</h3>
-          <p>
-            Immerse yourself in glorious forts, magnificent palaces, vibrant cultural markets, 
-            and traditional royal cuisine in Rajasthan.
-          </p>
-          <p><strong>Best Time:</strong> October to March</p>
-        </div>
-      </article>
+          <div class="gadget-card">
+            <span class="gadget-heart">🤍</span>
+            <div class="gadget-img-box">⌚</div>
+            <div class="gadget-name">Smart Fitness Watch</div>
+            <div class="gadget-brand">Apple Tech</div>
+            <div class="gadget-bottom">
+              <span class="gadget-price">$150</span>
+              <div class="gadget-qty-control">
+                <span class="qty-btn">-</span>
+                <span>1</span>
+                <span class="qty-btn">+</span>
+              </div>
+            </div>
+          </div>
 
-    </div>
+          <div class="gadget-card">
+            <span class="gadget-heart">❤️</span>
+            <div class="gadget-img-box">⌨️</div>
+            <div class="gadget-name">Mechanical Gaming Keyboard</div>
+            <div class="gadget-brand">Keychron RGB</div>
+            <div class="gadget-bottom">
+              <span class="gadget-price">$89</span>
+              <button type="button" style="background: #4f46e5; color: white; border: none; padding: 4px 10px; border-radius: 4px; cursor: pointer; font-size: 0.8rem;">+ Add</button>
+            </div>
+          </div>
 
-    <!-- Travel Tips Section -->
-    <div class="travel-tips">
-      <h3>Essential Travel Tips for Beginners</h3>
-      <ol style="margin-left: 20px; line-height: 1.8;">
-        <li>Always book transportation and accommodation ahead of peak vacation seasons.</li>
-        <li>Keep digital and printed photocopies of your primary identification documents.</li>
-        <li>Carry lightweight, weather-appropriate clothing and comfortable walking shoes.</li>
-        <li>Respect local customs, traditions, and maintain environmental cleanliness.</li>
-      </ol>
+        </div>
+      </div>
     </div>
 
   </main>
 
   <footer class="footer">
-    <p>&copy; 2026 Kishore Kumar. All Rights Reserved. Built with HTML &amp; CSS.</p>
+    <p>&copy; 2026 Kishore Kumar K. All Rights Reserved. Built with pure HTML &amp; CSS.</p>
   </footer>
 
 </body>
