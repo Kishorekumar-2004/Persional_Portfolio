@@ -1,0 +1,175 @@
+%-----------------------------------------------------------------------------------------------------------------------------------------------%
+%	Professional Single-Page Resume - Kishore Kumar K
+%	Optimized for Overleaf (pdfLaTeX / XeLaTeX) - Perfectly Balanced Top-to-Bottom (Strict 1 Page)
+%-----------------------------------------------------------------------------------------------------------------------------------------------%
+
+\documentclass[a4paper,11pt]{article}
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES & PAGE SETUP
+%----------------------------------------------------------------------------------------
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[top=0.48in, bottom=0.48in, left=0.55in, right=0.55in]{geometry}
+\usepackage{titlesec}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{fontawesome5}
+\usepackage[usenames,dvipsnames]{xcolor}
+
+% Custom Professional Colors
+\definecolor{primary}{RGB}{20, 60, 120}     % Professional Dark Navy
+\definecolor{textdark}{RGB}{30, 41, 59}     % Slate Dark Text
+\definecolor{accent}{RGB}{37, 99, 235}      % Accent Blue
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=accent,
+    urlcolor=accent,
+    pdfauthor={Kishore Kumar K},
+    pdftitle={Kishore Kumar K - Resume}
+}
+
+% Section Titles Styling (Clean with Underline)
+\titleformat{\section}
+  {\large\bfseries\color{primary}\raggedright}
+  {}{0em}{}[\color{primary}\titlerule]
+
+\titlespacing{\section}{0pt}{7pt}{4pt}
+
+% Bullet List Customization
+\setlist[itemize]{
+    leftmargin=*,
+    label=\small$\bullet$,
+    itemsep=2pt,
+    topsep=2pt,
+    parsep=0pt,
+    partopsep=0pt
+}
+
+\pagestyle{empty}
+
+%----------------------------------------------------------------------------------------
+%	BEGIN DOCUMENT
+%----------------------------------------------------------------------------------------
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	HEADER / CONTACT
+%----------------------------------------------------------------------------------------
+\begin{center}
+    {\fontsize{21}{25}\selectfont \textbf{\color{primary}Kishore Kumar K}} \\[3.5pt]
+    \normalsize \textbf{Aspiring Full Stack Developer} \\[3.5pt]
+    \small
+    \href{tel:+918681077477}{\faPhone*\ +91 8681077477} \quad $|$ \quad
+    \href{mailto:dev.kishorekumar18@gmail.com}{\faEnvelope\ dev.kishorekumar18@gmail.com} \quad $|$ \quad
+    \href{https://in.linkedin.com/in/kishore-kumar-2004k}{\faLinkedin\ in/kishore-kumar-2004k} \quad $|$ \quad
+    \href{https://github.com/Kishorekumar-2004}{\faGithub\ Kishorekumar-2004} \quad $|$ \quad
+    \href{https://persionalportfolio-xi.vercel.app/}{\faGlobe\ Portfolio}
+\end{center}
+
+\vspace{-4pt}
+
+%----------------------------------------------------------------------------------------
+%	SUMMARY
+%----------------------------------------------------------------------------------------
+\section{Professional Summary}
+Aspiring \textbf{Full Stack Developer} with hands-on internship experience and specialized training in Java Full Stack Development at \textbf{Tap Academy}. Skilled in \textbf{Core Java}, \textbf{Spring Boot}, \textbf{React}, and relational/NoSQL databases (\textbf{MySQL, MongoDB}). Experienced in developing modern web applications, implementing scalable REST APIs, and exploring \textbf{Agentic AI} concepts to solve real-world engineering challenges.
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE & TRAINING
+%----------------------------------------------------------------------------------------
+\section{Work Experience \& Training}
+
+\noindent
+\textbf{Java Full Stack Development Training} \hfill \textit{Jan 2026 -- Present} \\
+\textit{Tap Academy} \hfill \textit{Bengaluru, India}
+\begin{itemize}
+    \item Mastering full-stack architecture covering \textbf{Core Java, OOP, Spring Boot, Hibernate, React, and MySQL/MongoDB}.
+    \item Architecting scalable RESTful web services with layered MVC patterns, robust transaction handling, and secure database CRUD pipelines.
+    \item Exploring \textbf{Agentic AI} principles and local LLM integrations to build autonomous, intelligent workflow automation tools.
+\end{itemize}
+
+\vspace{4pt}
+\noindent
+\textbf{Full Stack Web Development Intern} \hfill \textit{June 2025 -- July 2025}
+\begin{itemize}
+    \item Developed responsive client-facing web pages and integrated backend services with structured relational database operations.
+    \item Collaborated with cross-functional teams to resolve production UI/UX bugs, optimize database queries, and assist in build deployment cycles.
+\end{itemize}
+
+%----------------------------------------------------------------------------------------
+%	PROJECTS
+%----------------------------------------------------------------------------------------
+\section{Key Technical Projects}
+
+\noindent
+\textbf{AI-Driven Hybrid Framework for Automated Threat Hunting} \hfill \href{https://github.com/Kishorekumar-2004/Hybrid-ids}{\faGithub\ Code} \\
+\textit{Technologies: Python, SQLite, Network Security, Statistical Anomaly Detection}
+\begin{itemize}
+    \item Engineered an intelligent cybersecurity detection engine combining statistical entropy metrics with signature heuristics for network packet analysis.
+    \item Built an interactive live monitoring dashboard with lightweight \textbf{SQLite} logging, cutting incident detection and triage latency.
+\end{itemize}
+
+\vspace{3pt}
+\noindent
+\textbf{MiniGPT-Based Local Chat System} \hfill \href{https://github.com/Kishorekumar-2004/Offline-llm-chatbot}{\faGithub\ Code} \\
+\textit{Technologies: Local LLM, Python, JavaScript, Quantization (Q4\_K\_M)}
+\begin{itemize}
+    \item Built a 100\% offline, air-gapped conversational system powered by quantized local LLMs, ensuring \textbf{absolute data privacy} with zero external API calls.
+    \item Engineered a responsive browser interface featuring multi-turn conversation memory and rapid inference on consumer hardware.
+\end{itemize}
+
+\vspace{3pt}
+\noindent
+\textbf{Gadget Store E-Commerce Web Application} \hfill \href{https://gadget-store-using-react.vercel.app/}{\faExternalLink*\ Live Demo} \quad $|$ \quad \href{https://github.com/Kishorekumar-2004/Gadget_Store-using-React}{\faGithub\ Code} \\
+\textit{Technologies: React.js, Vite, JavaScript, CSS Variables}
+\begin{itemize}
+    \item Built a responsive shopping platform with dynamic state management, interactive slide-out cart drawer, and real-time quantity controls.
+    \item Integrated instant catalog search filtering, persistent Wishlist functionality, and a smooth dark/light mode toggle.
+\end{itemize}
+
+%----------------------------------------------------------------------------------------
+%	TECHNICAL SKILLS (Original Categories Restored)
+%----------------------------------------------------------------------------------------
+\section{Technical Skills}
+\begin{tabularx}{\linewidth}{@{}p{0.28\linewidth} X@{}}
+\textbf{Languages/Technologies:} & Java, JavaScript, HTML, CSS \\
+\textbf{Frameworks:} & React, Spring Boot, Hibernate \\
+\textbf{Databases:} & MySQL, PostgreSQL \\
+\textbf{APIs:} & REST APIs \\
+\textbf{Developer Tools:} & Visual Studio Code, Eclipse, IntelliJ IDEA, Git, GitHub Copilot \\
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+\section{Education}
+
+\noindent
+\textbf{B.E. in Computer Science and Engineering} \hfill \textbf{GPA: 8.22 / 10} \\
+P.S.N.A College Of Engineering And Technology \hfill \textit{2023 -- 2026}
+
+\vspace{3pt}
+\noindent
+\textbf{Diploma in Civil Engineering (DCE)} \hfill \textbf{GPA: 9.4 / 10} \\
+Rathnavel Subramaniam Polytechnic College \hfill \textit{2020 -- 2023}
+
+\vspace{3pt}
+\noindent
+\textbf{Higher Secondary Certificate (HSC)} \hfill \textbf{64\%} \\
+PRNP Vidhya Mandhir HR.SEC School \hfill \textit{2019 -- 2020}
+
+%----------------------------------------------------------------------------------------
+%	CERTIFICATIONS
+%----------------------------------------------------------------------------------------
+\section{Certifications}
+\begin{itemize}
+    \item \textbf{Cloud \& Infrastructure:} AWS Cloud Training Certification $|$ IBM SkillsBuild Cloud Computing Fundamentals
+    \item \textbf{Data \& Intelligence:} IBM Machine Learning $|$ IBM Data Science Specialist Certification
+    \item \textbf{IoT \& Systems:} Cisco: Introduction to IoT (Internet of Things) $|$ Wipro TalentNext Training
+\end{itemize}
+
+\end{document}
